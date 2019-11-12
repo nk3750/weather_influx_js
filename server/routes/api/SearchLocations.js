@@ -1,4 +1,10 @@
 const fetch = require('node-fetch');
+const Influx = require('influx');
+const influx= new Influx.InfluxDB({
+  host: 'localhost',
+  database: 'weatherAtlanta',
+  port:8086
+  });
 
 module.exports = (app) => {
 
@@ -17,25 +23,19 @@ module.exports = (app) => {
 
   app.get('/search-location-weather', (req, res) => {
     // build api URL with user zip
-    const baseUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-    const apiId = '&appid=<YOUR API KEY GOES HERE>&units=imperial';
-    const userLocation = (url1, url2, zipcode) => {
-
-      let newUrl = url1 + zipcode + url2;
-      return newUrl;
-    };
-
-    const apiUrl = userLocation(baseUrl, apiId, zipcode);
-
-    fetch(apiUrl)
-      .then(res => res.json())
+    influx.query(`
+      select * from atlanta
+      where "weather_main"='Drizzle'
+      limit 10
+    `).then(result => {
+      res.json(result)
       .then(data => {
         res.send({ data });
       })
-      .catch(err => {
-        res.redirect('/error');
-      });
-
-  });
+    }).catch(err => {
+      res.status(500).send(err.stack)
+    })
+  })
 
 };
+

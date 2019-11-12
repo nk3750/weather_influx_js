@@ -19,4 +19,4 @@ ReactDOM.render(
   </Router>
   , document.getElementById('root'));
 
-registerServiceWorker(); // eslint-disable-line no-undef
+//registerServiceWorker(); // eslint-disable-line no-undef
