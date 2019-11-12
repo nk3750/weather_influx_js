@@ -15,6 +15,8 @@ const Home = () => {
       <div className='zipcodeInput'>
         <form method='POST' action='/search-location'>
           <input type='text' placeholder='Enter City..' name='zipcode'/>
+          <input type='text' placeholder='Enter tag' name='tag'/>
+          <input type='text' placeholder='Enter field' name='field'/>
           <button>ENTER</button>
         </form>
       </div>

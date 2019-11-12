@@ -10,10 +10,14 @@ module.exports = (app) => {
 
   let zipcode;
   let groupattr;
+  let tag;
+  let field;
 
   app.post('/search-location', (req, res) => {
 
     zipcode = req.body.zipcode;
+    tag=req.body.tag;
+    field=req.body.field;
 
     if (!zipcode || zipcode!='atlanta') {
       res.redirect('/error');
@@ -49,8 +53,7 @@ module.exports = (app) => {
   app.get('/search-location-weather', (req, res) => {
     // build api URL with user zip
     influx.query(`
-      select * from ${zipcode}
-      where "weather_main"='Drizzle'
+      select "${tag}", "${field}" from ${zipcode}
       limit 10
     `).then(result => {
       res.json(result)
