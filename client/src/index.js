@@ -8,12 +8,14 @@ import App from './views/App';
 import Home from './views/Home';
 import CurrentWeather from './views/CurrentWeather';
 import ErrorDisplay from './views/ErrorDisplay';
+import groupWeather from './views/groupWeather';
 
 ReactDOM.render(
   <Router>
     <App>
       <Route exact path='/' component={Home}/>
       <Route exact path='/current-weather' component={CurrentWeather}/>
+      <Route exact path='/group-weather' component={groupWeather}/>
       <Route exact path='/error' component={ErrorDisplay}/>
     </App>
   </Router>
