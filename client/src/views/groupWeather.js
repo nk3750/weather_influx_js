@@ -15,7 +15,7 @@ class groupWeather extends Component {
     setTimeout(() => {
       fetch('/group-location-weather')
   .then(res => res.json())
-  .then(data => this.setState({ data }));
+  .then(data => this.setState({ data:JSON.stringify(data) }));
       console.log('Our data is fetched');
     
     }, 1000)

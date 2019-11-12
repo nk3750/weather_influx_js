@@ -31,10 +31,11 @@ module.exports = (app) => {
   });
   app.get('/group-location-weather', (req, res) => {
     // build api URL with user zip
+    console.log(groupattr)
     influx.query(`
       select * from atlanta
       where "weather_main"='Drizzle'
-      groupby ${groupattr}
+      GROUP BY "${groupattr}"
     `).then(result => {
       res.json(result)
       .then(data => {
