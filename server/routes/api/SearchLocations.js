@@ -14,7 +14,7 @@ module.exports = (app) => {
 
     zipcode = req.body.zipcode;
 
-    if (!zipcode || zipcode.length < 5 || zipcode.length > 5) {
+    if (!zipcode || zipcode!='atlanta') {
       res.redirect('/error');
     } else {
       res.redirect('/current-weather');
@@ -24,7 +24,7 @@ module.exports = (app) => {
   app.get('/search-location-weather', (req, res) => {
     // build api URL with user zip
     influx.query(`
-      select * from atlanta
+      select * from ${zipcode}
       where "weather_main"='Drizzle'
       limit 10
     `).then(result => {
