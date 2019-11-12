@@ -12,17 +12,24 @@ module.exports = (app) => {
   let groupattr;
   let tag;
   let field;
-
+  let startdate;
+  let enddate;
+  
   app.post('/search-location', (req, res) => {
 
     zipcode = req.body.zipcode;
     tag=req.body.tag;
     field=req.body.field;
+    startdate=req.body.startdate;
+    enddate=req.body.enddate;
 
-    if (!zipcode || zipcode!='atlanta') {
+    if (!zipcode) {
       res.redirect('/error');
-    } else {
+    } else if(zipcode!='atlanta' || zipcode!='rochester') {
       res.redirect('/current-weather');
+    }
+    else{
+      res.redirect('/error')
     }
   });
   // app.post('/group-weather', (req, res)) => {
@@ -52,8 +59,9 @@ module.exports = (app) => {
 
   app.get('/search-location-weather', (req, res) => {
     // build api URL with user zip
+    console.log(startdate);
     influx.query(`
-      select "${tag}", "${field}" from ${zipcode}
+      select "${tag}", "${field}" from ${zipcode} where time >= '${startdate}' AND time <= '${enddate}'
       limit 10
     `).then(result => {
       res.json(result)

@@ -1,6 +1,6 @@
 import React from 'react';
 import LightningBolt from './assets/lightning.svg';
-
+import DateTimePicker from 'react-datetime-picker'
 const Home = () => {
 
   return (
@@ -17,6 +17,8 @@ const Home = () => {
           <input type='text' placeholder='Enter City..' name='zipcode'/>
           <input type='text' placeholder='Enter tag' name='tag'/>
           <input type='text' placeholder='Enter field' name='field'/>
+          <input type='date' placeholder='start date' name='startdate'/>
+          <input type='date' placeholder='end date' name='enddate'/>
           <button>ENTER</button>
         </form>
       </div>
