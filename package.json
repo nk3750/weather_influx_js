@@ -17,6 +17,7 @@
     "isomorphic-fetch": "^2.2.1",
     "node-fetch": "^2.1.2",
     "nodemon": "^1.17.4",
+    "react-json-table": "^0.1.1",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {

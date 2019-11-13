@@ -20,8 +20,8 @@ module.exports = (app) => {
     zipcode = req.body.zipcode;
     tag=req.body.tag;
     field=req.body.field;
-    startdate=req.body.startdate;
-    enddate=req.body.enddate;
+    startdate=req.body.startdate.concat(':00.000Z');
+    enddate=req.body.enddate.concat(':00.000Z');
 
     if (!zipcode) {
       res.redirect('/error');
@@ -62,7 +62,6 @@ module.exports = (app) => {
     console.log(startdate);
     influx.query(`
       select "${tag}", "${field}" from ${zipcode} where time >= '${startdate}' AND time <= '${enddate}'
-      limit 10
     `).then(result => {
       res.json(result)
       .then(data => {

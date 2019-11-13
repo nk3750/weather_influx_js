@@ -15,7 +15,7 @@ class CurrentWeather extends Component {
     setTimeout(() => {
       fetch('/search-location-weather')
   .then(res => res.json())
-  .then(data => this.setState({ data }));
+  .then(data => this.setState({ data:JSON.stringify(data, null, 2) }));
       console.log('Our data is fetched');
       
     }, 1000)
@@ -27,19 +27,11 @@ class CurrentWeather extends Component {
 
   render() {
     return(
-      <table>
-      <tbody>{this.state.data.map(function(item, key) {
-             
-               return (
-                  <tr key = {key}>
-                      <td>{item.time}</td>
-                      <td>{item.weather_description}</td>
-                      <td>{item.temp_min}</td>
-                  </tr>
-                )
-             
-             })}</tbody>
-       </table>
+      <div>
+        <pre>
+      {this.state.data}
+      </pre>
+    </div>
     )
   }
   
