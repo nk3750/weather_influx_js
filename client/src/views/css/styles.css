@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i");
 body {
-  background: #016FB9;
+  background: #999100;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: #FAFAFA;
@@ -62,7 +62,47 @@ body {
     width: 25%;
     text-align: center;
     font-size: .9em;
-    color: #C0C0C0; }
+    color: rgb(71, 3, 3); }
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px; }
+  .tags p {
+    width: 25%;
+    text-align: center;
+    font-size: 1em;
+    font-weight:bold;
+    color: black; }
+  .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px; }
+  .field p {
+    width: 25%;
+    text-align: center;
+    font-size: 1em;
+    color: black; }
+.time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px; }
+  .time p {
+    width: 25%;
+    text-align: center;
+    font-size: .9em;
+    color:black; }
 
 .zipcodeInput {
   display: -webkit-box;

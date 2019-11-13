@@ -10,7 +10,17 @@ const Home = () => {
         <img src={LightningBolt}/>
       </div>
       <div className="instructions">
-        <p>Enter a US city name below to get the  weather conditions for that area.</p>
+        <p>Cities supported: rochester, atlanta</p>
+      </div>
+      <div className="tags">
+        <p>Tags Supported: weather_description, weather_main</p>
+      </div>
+      <div className="field">
+      <p>Fields Supported: clouds_all, humidity, pressure, temp, temp_max, temp_min</p>
+      </div>
+      <div className="time">
+      <p>Time Supported:From: January 01, 2019
+                        To: October 27, 2019 </p>
       </div>
       <div className='zipcodeInput'>
         <form method='POST' action='/search-location'>
