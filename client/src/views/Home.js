@@ -12,15 +12,26 @@ const Home = () => {
       <div className="instructions">
         <p>Cities supported: rochester, atlanta</p>
       </div>
-      <div className="tags">
+      {/* <div className="tags">
         <p>Tags Supported: weather_description, weather_main</p>
       </div>
       <div className="field">
       <p>Fields Supported: clouds_all, humidity, pressure, temp, temp_max, temp_min</p>
-      </div>
+      </div> */}
       <div className="time">
-      <p>Time Supported:From: January 01, 2019
-                        To: October 27, 2019 </p>
+      <p>Time Supported:From: January 01, 2019 To: October 27, 2019 <br></br>You can use absolute time or relative time for the query. <br></br> Please check the "Use Relative time instead?" checkbox<br></br> if you want to use relative time</p>
+      </div>
+      <div className="relativetime">
+      <p>Relative time is supported wrt now() where now() is the current time. i.e now() -/+ "duration_literal"</p>
+      </div>
+      <div className="duration">
+      <p><strong>Duration Literals: (u or µ)-microseconds, (ms)-milliseconds, (s)-seconds, (m)-minutes, (h)-hours, (d)-days, (w)-weeks.  <br></br>  Relative Time Examples: now()-10w, now()-100d</strong></p>
+      </div>
+      <div className="aggregate">
+      <p>Supported aggregate functions: COUNT(), DISTINCT(), INTEGRAL(), MEAN(), MEDIAN(), MODE(), SPREAD(), STDDEV(), SUM()</p>
+      </div>
+      <div className="groupbytime">
+      <p>Group by time interval using Duration literals. Eg: 10s, 1m, 3h, 3d, 3w</p>
       </div>
       <div className='zipcodeInput'>
         <form method='POST' action='/search-location'>
@@ -75,7 +86,7 @@ const Home = () => {
          
           </div>
           <div className="ib">  
-          <p>Enter relative start and end dat-time </p>
+          <p>Enter relative start / end date-time </p>
           <div>
               <input type='text' placeholder='Enter relative start time' name='relStartTime'/>
               <input type='text' placeholder='Enter relative end time' name='relendTime'/>
@@ -96,10 +107,10 @@ const Home = () => {
         <form method='POST' action='/group-weather'>
           <input type='text' placeholder='Enter City..' name='city'/>
           <input type='text' placeholder='Aggregate Function' name='aggFunc'/>
-          <input type='text' placeholder='Aggregate Attribute' name='aggAttr'/>
+          <input type='text' placeholder='Aggregate Tag' name='aggAttr'/>
           <input type='datetime-local' placeholder='start date' name='startDateTime'/>
           <input type='datetime-local' placeholder='end date' name='endDateTime'/>
-          <input type='text' placeholder='Time Interval' name='timeInterval'/>
+          <input type='text' placeholder='Group-By Time-Interval' name='timeInterval'/>
           <button>ENTER</button>
         </form>
       </div>

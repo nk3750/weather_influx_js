@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i");
 body {
-  background: #FFFDD0;
+  background-color: olive;
+  /* background-position: right top; */
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: rgb(8, 0, 0);
+  color:white;
   margin: 0;
   padding: 0; }
 
@@ -47,8 +48,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 100px;
-  letter-spacing: .2px; }
+  margin-top: 10px;
+
+  letter-spacing: .2px;
+  font-size: 1em;
+  font-weight: bold;
+  color:white }
   .header img {
     margin-left: 10px; }
 
@@ -63,9 +68,10 @@ body {
   .instructions p {
     width: 25%;
     text-align: center;
-    font-size: .9em;
-    color: rgb(71, 3, 3); }
-.tags {
+    font-size: 1em;
+    font-weight: bold;
+    color:white; }
+/* .tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +97,7 @@ body {
     width: 25%;
     text-align: center;
     font-size: 1em;
-    color: black; }
+    color: black; } */
 .time {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,13 +105,69 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 10px; }
+  margin-top: 0.5px; }
   .time p {
     width: 25%;
     text-align: center;
-    font-size: .9em;
-    color:black; }
-
+    font-size: 1em;
+    font-weight: bold;
+    color:white; }
+.relativetime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0.5px; }
+  .relativetime p {
+    width: 25%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color:white; }
+    .duration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0.5px; }
+  .duration p {
+    width: 25%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color:white; }
+     .aggregate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0.5px; }
+  .aggregate p {
+    width: 25%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color:white; }
+     .groupbytime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0.5px; }
+  .groupbytime p {
+    width: 25%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color:white; }
 .zipcodeInput {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,7 +180,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin-top: 80px; }
+  margin-top: 10px; }
   .zipcodeInput form input {
     padding: 10px 30px;
     border: none;
@@ -150,7 +212,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px; }
+  margin-top: 10px; }
   .homeBtn button {
     padding: 10px 22px;
     border-radius: 2px;
@@ -225,7 +287,7 @@ body {
 
     .ib {
       display: inline-block;
-      color:rebeccapurple;
+      color:white;
       font-size: 100%;
       vertical-align: top;
 
