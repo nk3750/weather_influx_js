@@ -9,11 +9,18 @@ const influx= new Influx.InfluxDB({
 module.exports = (app) => {
 
   let zipcode;
-  let groupattr;
+  // let groupattr;
   let tag;
   let field;
   let startdate;
   let enddate;
+//Search Location
+  let city;
+  let aggFunc;
+  let aggAttr;
+  let startDateTime;
+  let endDateTime;
+  let timeInterval;
   
   app.post('/search-location', (req, res) => {
 
@@ -37,16 +44,22 @@ module.exports = (app) => {
   // });
   app.post('/group-weather', (req, res) => {
 
-    groupattr = req.body.groupattr;
+    city=req.body.city;
+    aggFunc=req.body.aggFunc;
+    aggAttr=req.body.aggAttr;
+    startDateTime=req.body.startDateTime.concat(':00.000Z');
+    endDateTime=req.body.endDateTime.concat(':00.000Z');
+    timeInterval=req.body.timeInterval;
     res.redirect('/group-weather')
   });
   app.get('/group-location-weather', (req, res) => {
     // build api URL with user zip
-    console.log(groupattr)
+    console.log(city);
+    console.log(aggAttr,aggFunc,timeInterval);
     influx.query(`
-      select * from atlanta
-      where "weather_main"='Drizzle'
-      GROUP BY "${groupattr}"
+      select ${aggFunc}("${aggAttr}") from ${city}
+      where time >= '${startDateTime}' AND time <= '${endDateTime}'
+      GROUP BY time(${timeInterval})
     `).then(result => {
       res.json(result)
       .then(data => {

@@ -20,7 +20,7 @@ body {
     width: 100%;
     margin-top: 80px; }
     .groupby form input {
-      padding: 10px 170px;
+      padding: 10px 150px;
       border: none;
       border-radius: 2px;
       outline: none;
@@ -117,7 +117,7 @@ body {
   width: 100%;
   margin-top: 80px; }
   .zipcodeInput form input {
-    padding: 10px 170px;
+    padding: 10px 150px;
     border: none;
     border-radius: 2px;
     outline: none;
