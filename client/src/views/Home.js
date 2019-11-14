@@ -37,7 +37,6 @@ const Home = () => {
           <input type='text' placeholder='Enter City..' name='city'/>
           <input type='text' placeholder='Aggregate Function' name='aggFunc'/>
           <input type='text' placeholder='Aggregate Attribute' name='aggAttr'/>
-          {/* <input type='text' placeholder='Enter groupby attr' name='groupattr'/> */}
           <input type='datetime-local' placeholder='start date' name='startDateTime'/>
           <input type='datetime-local' placeholder='end date' name='endDateTime'/>
           <input type='text' placeholder='Time Interval' name='timeInterval'/>

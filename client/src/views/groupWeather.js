@@ -7,7 +7,7 @@ class groupWeather extends Component {
   constructor(props){
     super(props);
     this.state = {
-      data: 'Aayega'
+      data: []
     }
   }
 
@@ -15,7 +15,7 @@ class groupWeather extends Component {
     setTimeout(() => {
       fetch('/group-location-weather')
   .then(res => res.json())
-  .then(data => this.setState({ data:JSON.stringify(data,null,1) }));
+  .then(data => this.setState({ data:JSON.stringify(data, null, 2) }));
       console.log('Our data is fetched');
     
     }, 1000)
@@ -28,7 +28,9 @@ class groupWeather extends Component {
   render() {
     return(
       <div>
+          <pre>
       {this.state.data}
+      </pre>
     </div>
     )
   }
