@@ -23,7 +23,9 @@ module.exports = (app) => {
   let temp_min;
   let startdate;
   let enddate;
-  let subscribe;
+  let relStartTime;
+  let relendTime;
+  let relative_time;
 //Search Location
   let city;
   let aggFunc;
@@ -65,13 +67,23 @@ module.exports = (app) => {
     }
     if (temp_max){
       field.push(temp_max)
+
     }
     if (temp_min){
       field.push(temp_min)
     }
     // tag.push(weather_description,weather_main);
+    relative_time=req.body.relative_time;
+    if (relative_time){
+      startdate=req.body.relStartTime;
+      enddate=req.body.relendTime;
+    }
+    else{ 
     startdate=req.body.startdate.concat(':00.000Z');
+    startdate="'" + startdate + "'"
     enddate=req.body.enddate.concat(':00.000Z');
+    enddate="'" + enddate + "'"
+  }
     subscribe=req.body.subscribe;
     if (!zipcode) {
       res.redirect('/error');
@@ -117,9 +129,10 @@ module.exports = (app) => {
     // build api URL with user zip
     console.log(tag);
     console.log(field);
-    console.log(clouds_all);
+    console.log(startdate);
+    console.log(enddate);
     influx.query(`
-      select ${tag}, ${field} from ${zipcode} where time >= '${startdate}' AND time <= '${enddate}'
+      select ${tag}, ${field} from ${zipcode} where time >= ${startdate} AND time <= ${enddate}
     `).then(result => {
       res.json(result)
       .then(data => {

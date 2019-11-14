@@ -24,10 +24,13 @@ const Home = () => {
       </div>
       <div className='zipcodeInput'>
         <form method='POST' action='/search-location'>
+        <div className="ib">
+        <p>Enter city</p>
           <input type='text' placeholder='Enter City..' name='zipcode'/>
+          </div>
           {/* <input type='text' placeholder='Enter tag' name='tag'/> */}
           <div className="ib">
-          <p>Check Fields</p>
+          <p>Select Fields</p>
             <div>
               <input type="checkbox" id="weather_description" name="weather_description" value="weather_description"></input>
               <label for="weather_description">weather_description</label>
@@ -39,7 +42,7 @@ const Home = () => {
           
           </div>
           <div className="ib">
-          <p>Check Tags</p>
+          <p>Select Tags</p>
             <div>
               <input type="checkbox" id="clouds_all" name="clouds_all" value="clouds_all"></input>
               <label for="clouds_all">clouds_all</label>
@@ -65,11 +68,24 @@ const Home = () => {
               <label for="temp_min">temp_min</label>
               </div>
           </div>
-              
+          <div className="ib">  
+          <p>Enter absolute start date-time     Enter absolute end date-time</p>
           <input type='datetime-local' placeholder='start date' name='startdate'/>
           <input type='datetime-local' placeholder='end date' name='enddate'/>
-          
+         
+          </div>
+          <div className="ib">  
+          <p>Enter relative start and end dat-time </p>
+              <input type='text' placeholder='Enter relative start time' name='relStartTime'/>
+              <input type='text' placeholder='Enter relative end time' name='relendTime'/>
+              <input type="checkbox" id="relative_time" name="relative_time" value="relative_time"></input>
+            <label for="relative_time">Use Relative time instead?</label>
+
+          </div>
+          <div className="ib">  
+          <p>Submit your query</p>
           <button>ENTER</button>
+          </div>
         </form>
       </div>
       <div className='groupby'>
