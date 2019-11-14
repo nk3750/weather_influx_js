@@ -112,6 +112,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+          
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -219,3 +220,7 @@ body {
             box-shadow: 1px 1px 4px #333;
     margin-top: 30px;
     cursor: pointer; }
+
+    .ib {
+      display: inline-block;
+    }

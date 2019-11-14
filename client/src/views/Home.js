@@ -25,10 +25,48 @@ const Home = () => {
       <div className='zipcodeInput'>
         <form method='POST' action='/search-location'>
           <input type='text' placeholder='Enter City..' name='zipcode'/>
-          <input type='text' placeholder='Enter tag' name='tag'/>
-          <input type='text' placeholder='Enter field' name='field'/>
+          {/* <input type='text' placeholder='Enter tag' name='tag'/> */}
+          <div className="ib">
+            <div>
+              <input type="checkbox" id="weather_description" name="weather_description" value="weather_description"></input>
+              <label for="weather_description">weather_description</label>
+            </div>
+            <div>
+              <input type="checkbox" id="weather_main" name="weather_main" value="weather_main"></input>
+              <label for="weather_main">weather_main</label>
+            </div>
+          
+          </div>
+          <div className="ib">
+            <div>
+              <input type="checkbox" id="clouds_all" name="clouds_all" value="clouds_all"></input>
+              <label for="clouds_all">clouds_all</label>
+            </div>
+            <div>
+            <input type="checkbox" id="humidity" name="humidity" value="humidity"></input>
+              <label for="humidity">humidity</label>
+            </div>
+            <div>
+              <input type="checkbox" id="pressure" name="pressure" value="pressure"></input>
+              <label for="pressure">pressure</label>
+              </div>
+              <div>
+              <input type="checkbox" id="temp" name="temp" value="temp"></input>
+              <label for="temp">temp</label>
+              </div>
+              <div>
+              <input type="checkbox" id="temp_max" name="temp_max" value="temp_max"></input>
+              <label for="temp_max">temp_max</label>
+              </div>
+              <div>
+              <input type="checkbox" id="temp_min" name="temp_min" value="temp_min"></input>
+              <label for="temp_min">temp_min</label>
+              </div>
+          </div>
+              
           <input type='datetime-local' placeholder='start date' name='startdate'/>
           <input type='datetime-local' placeholder='end date' name='enddate'/>
+          
           <button>ENTER</button>
         </form>
       </div>

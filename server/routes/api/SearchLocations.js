@@ -10,10 +10,20 @@ module.exports = (app) => {
 
   let zipcode;
   // let groupattr;
-  let tag;
-  let field;
+  let tag=[];
+
+  let weather_description;
+  let weather_main;
+  let field=[];
+  let clouds_all;
+  let humidity;
+  let pressure;
+  let temp;
+  let temp_max;
+  let temp_min;
   let startdate;
   let enddate;
+  let subscribe;
 //Search Location
   let city;
   let aggFunc;
@@ -25,11 +35,43 @@ module.exports = (app) => {
   app.post('/search-location', (req, res) => {
 
     zipcode = req.body.zipcode;
-    tag=req.body.tag;
-    field=req.body.field;
+    // tag=req.body.tag;
+    weather_description=req.body.weather_description;
+    weather_main=req.body.weather_main;
+    clouds_all=req.body.clouds_all;
+    humidity=req.body.humidity;
+    pressure=req.body.pressure;
+    temp=req.body.temp;
+    temp_max=req.body.temp_max;
+    temp_min=req.body.temp_min;
+    if (weather_main){
+      tag.push(weather_main)
+    }
+    if (weather_description){
+      tag.push(weather_description)
+    }
+    if (clouds_all){
+      field.push(clouds_all)
+    }
+    if (humidity){
+      field.push(humidity)
+    }
+    if (pressure){
+      field.push(pressure)
+    }
+    if (temp){
+      field.push(temp)
+    }
+    if (temp_max){
+      field.push(temp_max)
+    }
+    if (temp_min){
+      field.push(temp_min)
+    }
+    // tag.push(weather_description,weather_main);
     startdate=req.body.startdate.concat(':00.000Z');
     enddate=req.body.enddate.concat(':00.000Z');
-
+    subscribe=req.body.subscribe;
     if (!zipcode) {
       res.redirect('/error');
     } else if(zipcode!='atlanta' || zipcode!='rochester') {
@@ -55,7 +97,7 @@ module.exports = (app) => {
   app.get('/group-location-weather', (req, res) => {
     // build api URL with user zip
     console.log(city);
-    console.log(aggAttr,aggFunc,timeInterval);
+    // console.log(aggAttr,aggFunc,timeInterval);
     influx.query(`
       select ${aggFunc}("${aggAttr}") from ${city}
       where time >= '${startDateTime}' AND time <= '${endDateTime}'
@@ -72,9 +114,11 @@ module.exports = (app) => {
 
   app.get('/search-location-weather', (req, res) => {
     // build api URL with user zip
-    console.log(startdate);
+    console.log(tag);
+    console.log(field);
+    console.log(clouds_all);
     influx.query(`
-      select "${tag}", "${field}" from ${zipcode} where time >= '${startdate}' AND time <= '${enddate}'
+      select ${tag}, ${field} from ${zipcode} where time >= '${startdate}' AND time <= '${enddate}'
     `).then(result => {
       res.json(result)
       .then(data => {
