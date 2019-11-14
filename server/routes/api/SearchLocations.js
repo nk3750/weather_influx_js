@@ -33,7 +33,8 @@ module.exports = (app) => {
   let timeInterval;
   
   app.post('/search-location', (req, res) => {
-
+    field=[];
+    tag=[];
     zipcode = req.body.zipcode;
     // tag=req.body.tag;
     weather_description=req.body.weather_description;
@@ -123,6 +124,7 @@ module.exports = (app) => {
       res.json(result)
       .then(data => {
         res.send({ data });
+        
       })
     }).catch(err => {
       res.status(500).send(err.stack)

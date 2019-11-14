@@ -27,6 +27,7 @@ const Home = () => {
           <input type='text' placeholder='Enter City..' name='zipcode'/>
           {/* <input type='text' placeholder='Enter tag' name='tag'/> */}
           <div className="ib">
+          <p>Check Fields</p>
             <div>
               <input type="checkbox" id="weather_description" name="weather_description" value="weather_description"></input>
               <label for="weather_description">weather_description</label>
@@ -38,6 +39,7 @@ const Home = () => {
           
           </div>
           <div className="ib">
+          <p>Check Tags</p>
             <div>
               <input type="checkbox" id="clouds_all" name="clouds_all" value="clouds_all"></input>
               <label for="clouds_all">clouds_all</label>
