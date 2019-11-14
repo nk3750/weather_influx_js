@@ -76,10 +76,14 @@ const Home = () => {
           </div>
           <div className="ib">  
           <p>Enter relative start and end dat-time </p>
+          <div>
               <input type='text' placeholder='Enter relative start time' name='relStartTime'/>
               <input type='text' placeholder='Enter relative end time' name='relendTime'/>
+              </div>
+              <div>
               <input type="checkbox" id="relative_time" name="relative_time" value="relative_time"></input>
-            <label for="relative_time">Use Relative time instead?</label>
+              <label for="relative_time">Use Relative time instead?</label>
+              </div>
 
           </div>
           <div className="ib">  
