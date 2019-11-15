@@ -1,12 +1,12 @@
 import React from 'react';
-import LightningBolt from './assets/Paw-right -medium text.jpg';
+import LightningBolt from './assets/rit1.png';
 import DateTimePicker from 'react-datetime-picker'
 const Home = () => {
 
   return (
     <div>
       <div className='header'>
-        <h2>Weather Forcast</h2>
+        <h2>Historical Weather Data</h2>
         <img src={LightningBolt}/>
       </div>
       <div className="instructions">
