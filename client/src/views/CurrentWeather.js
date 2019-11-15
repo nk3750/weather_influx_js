@@ -35,8 +35,9 @@ class CurrentWeather extends Component {
     console.log(prop);
     return(
       <div>
-        
+        <p style={{ color: 'blue'}}>Please scroll down for an interactive graph</p>
         <JsonToTable json = {this.state.data} />
+        <p style={{ color: 'blue'}}>Please hover over the graph </p>
         <LineChart width={400} height={400} data={this.state.data}>
     <Line type="monotone" dataKey={prop[3]} stroke="#8884d8" />
     <Line type="monotone" dataKey={prop[4]} stroke="#FF3366" />

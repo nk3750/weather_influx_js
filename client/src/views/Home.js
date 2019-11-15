@@ -22,10 +22,10 @@ const Home = () => {
       <p>Time Supported:From: January 01, 2019 To: October 27, 2019 <br></br>You can use absolute time or relative time for the query. <br></br> Please check the "Use Relative time instead?" checkbox<br></br> if you want to use relative time</p>
       </div>
       <div className="relativetime">
-      <p>Relative time is supported wrt now() where now() is the current time. i.e now() -/+ "duration_literal"</p>
+      <p>Relative time is supported wrt now() where now() is the current time. i.e now() -/+ "duration_literal<br></br>  Input Format: now()-10w, now()-100d"</p>
       </div>
       <div className="duration">
-      <p><strong>Duration Literals: (u or µ)-microseconds, (ms)-milliseconds, (s)-seconds, (m)-minutes, (h)-hours, (d)-days, (w)-weeks.  <br></br>  Relative Time Examples: now()-10w, now()-100d</strong></p>
+      <p><strong>Duration Literals: (u or µ)-microseconds, (ms)-milliseconds, (s)-seconds, (m)-minutes, (h)-hours, (d)-days, (w)-weeks.  </strong></p>
       </div>
       <div className="aggregate">
       <p>Supported aggregate functions: COUNT(), DISTINCT(), INTEGRAL(), MEAN(), MEDIAN(), MODE(), SPREAD(), STDDEV(), SUM()</p>
@@ -80,7 +80,7 @@ const Home = () => {
               </div>
           </div>
           <div className="ib">  
-          <p>Enter absolute start date-time     Enter absolute end date-time</p>
+          <p>Enter date and type time (start,end) </p>
           <input type='datetime-local' placeholder='start date' name='startdate'/>
           <input type='datetime-local' placeholder='end date' name='enddate'/>
          
