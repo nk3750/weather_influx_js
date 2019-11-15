@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { default as fetch } from 'isomorphic-fetch';
+import { JsonToTable } from "react-json-to-table";
 
 class groupWeather extends Component {
 
@@ -15,7 +16,7 @@ class groupWeather extends Component {
     setTimeout(() => {
       fetch('/group-location-weather')
   .then(res => res.json())
-  .then(data => this.setState({ data:JSON.stringify(data, null, 2) }));
+  .then(data => this.setState({ data:data }));
       console.log('Our data is fetched');
     
     }, 1000)
@@ -28,9 +29,9 @@ class groupWeather extends Component {
   render() {
     return(
       <div>
-          <pre>
-      {this.state.data}
-      </pre>
+         
+          <JsonToTable json = {this.state.data} />
+      
     </div>
     )
   }

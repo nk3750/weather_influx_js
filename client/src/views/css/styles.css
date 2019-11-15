@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i");
 body {
-  background-image: url(../assets/19676.jpg);
+  background-color: white;
+  /* background-image: url(../assets/19676.jpg); */
   /* background-position: right top; */
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: white;
+  color: black;
   margin: 0;
   padding: 0; }
 
@@ -53,7 +54,7 @@ body {
   letter-spacing: .2px;
   font-size: 1em;
   font-weight: bold;
-  color:white }
+  color:black }
   .header img {
     margin-left: 10px; }
 
@@ -70,7 +71,7 @@ body {
     text-align: center;
     font-size: 1em;
     font-weight: bold;
-    color:white; }
+    color:black; }
 /* .tags {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,7 +112,7 @@ body {
     text-align: center;
     font-size: 1em;
     font-weight: bold;
-    color: white; }
+    color: black; }
 .relativetime {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,7 +126,7 @@ body {
     text-align: center;
     font-size: 1em;
     font-weight: bold;
-    color:white; }
+    color:black; }
     .duration {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,7 +140,7 @@ body {
     text-align: center;
     font-size: 1em;
     font-weight: bold;
-    color:white; }
+    color:black; }
      .aggregate {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,7 +154,7 @@ body {
     text-align: center;
     font-size: 1em;
     font-weight: bold;
-    color:white; }
+    color:black; }
      .groupbytime {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,7 +168,8 @@ body {
     text-align: center;
     font-size: 1em;
     font-weight: bold;
-    color:white; }
+    color:black; }
+     
 .zipcodeInput {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,7 +289,7 @@ body {
 
     .ib {
       display: inline-block;
-      color:white;
+      color:black;
       font-size: 100%;
       vertical-align: top;
 
