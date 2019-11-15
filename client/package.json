@@ -7,6 +7,7 @@
     "react-datetime-picker": "^2.7.1",
     "react-dom": "^16.3.2",
     "react-json-table": "^0.1.1",
+    "react-linechart": "^1.1.12",
     "react-scripts": "1.1.4",
     "ts-react-json-table": "^0.1.2"
   },
