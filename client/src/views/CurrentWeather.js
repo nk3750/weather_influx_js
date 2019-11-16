@@ -41,7 +41,7 @@ class CurrentWeather extends Component {
         <LineChart width={400} height={400} data={this.state.data}>
     <Line type="monotone" dataKey={prop[3]} stroke="#8884d8" />
     <Line type="monotone" dataKey={prop[4]} stroke="#FF3366" />
-    <Line type="monotone" dataKey={prop[5]} stroke="#CCFF33" />
+    <Line type="monotone" dataKey={prop[5]} stroke="#660099" />
     <Line type="monotone" dataKey={prop[6]} stroke="#CC0099" />
     <Line type="monotone" dataKey={prop[7]} stroke="#330066" />
     <Line type="monotone" dataKey={prop[8]} stroke="#0000CC" />
