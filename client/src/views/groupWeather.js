@@ -17,7 +17,7 @@ class groupWeather extends Component {
       fetch('/group-location-weather')
   .then(res => res.json())
   .then(data => this.setState({ data:data }));
-      console.log('Our data is fetched');
+      console.log('Our data is fetched ');
     
     }, 1000)
   }
