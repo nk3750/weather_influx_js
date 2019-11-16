@@ -40,7 +40,7 @@ class CurrentWeather extends Component {
         <p style={{ color: 'blue'}}>Please scroll down for an interactive graph</p>
         <JsonToTable json = {this.state.data} />
         <p style={{ color: 'blue'}}>Please hover over the graph </p>
-        <LineChart width={800} height={300} data={this.state.data}>
+        <LineChart width={800} height={600} data={this.state.data}>
         <XAxis  dataKey={prop[0]} padding={{left: 1, right: 1}}/>
         <YAxis />
         <Tooltip/>
