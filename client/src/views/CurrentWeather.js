@@ -40,19 +40,19 @@ class CurrentWeather extends Component {
         <p style={{ color: 'blue'}}>Please scroll down for an interactive graph</p>
         <JsonToTable json = {this.state.data} />
         <p style={{ color: 'blue'}}>Please hover over the graph </p>
-        <LineChart width={600} height={300} data={this.state.data}>
-        <XAxis dataKey={prop[0]} padding={{left: 10, right: 10}}/>
+        <LineChart width={800} height={300} data={this.state.data}>
+        <XAxis  dataKey={prop[0]} padding={{left: 1, right: 1}}/>
         <YAxis />
         <Tooltip/>
         <Legend />
-    <Line type="monotone" dataKey={prop[3]} stroke="#8884d8" />
-    <Line type="monotone" dataKey={prop[4]} stroke="#FF3366" />
-    <Line type="monotone" dataKey={prop[5]} stroke="#660099" />
-    <Line type="monotone" dataKey={prop[6]} stroke="#CC0099" />
-    <Line type="monotone" dataKey={prop[7]} stroke="#330066" />
-    <Line type="monotone" dataKey={prop[8]} stroke="#0000CC" />
-    <CartesianGrid stroke="#ccc" />
-  </LineChart>
+        <Line type="monotone" dataKey={prop[3]} stroke="#8884d8" />
+        <Line type="monotone" dataKey={prop[4]} stroke="#FF3366" />
+        <Line type="monotone" dataKey={prop[5]} stroke="#660099" />
+        <Line type="monotone" dataKey={prop[6]} stroke="#CC0099" />
+        <Line type="monotone" dataKey={prop[7]} stroke="#330066" />
+        <Line type="monotone" dataKey={prop[8]} stroke="#0000CC" />
+        <CartesianGrid stroke="#ccc" />
+        </LineChart>
     
     </div>
     )
