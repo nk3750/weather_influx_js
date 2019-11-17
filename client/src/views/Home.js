@@ -10,7 +10,7 @@ const Home = () => {
         <img src={LightningBolt}/>
       </div>
       <div className="instructions">
-        <p>Cities supported: rochester, atlanta <br></br> Please go through the README.md file for detailed instructions. </p>
+        <p>Cities supported: rochester, atlanta <br></br> Please go through the README.md file located in the root directory for detailed instructions. </p>
       </div>
       {/* <div className="tags">
         <p>Tags Supported: weather_description, weather_main</p>
