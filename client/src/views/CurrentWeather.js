@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { default as fetch } from 'isomorphic-fetch';
 import { JsonToTable } from "react-json-to-table";
 import { LineChart, Line,CartesianGrid,XAxis,YAxis,Tooltip,Legend } from 'recharts';
-var moment = require('moment');
 class CurrentWeather extends Component {
 
   constructor(props){
