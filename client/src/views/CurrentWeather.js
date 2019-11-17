@@ -33,7 +33,6 @@ class CurrentWeather extends Component {
         prop.push(property)
       }
     console.log(prop);
-    console.log(moment().format(prop[0]))
     return(
       <div>
         <p style={{ color: 'blue'}}>Please scroll down for an interactive graph</p>
