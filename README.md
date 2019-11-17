@@ -14,6 +14,19 @@
 
 -From the terminal, navigate into the /client directory and then run npm start. This will start up the React server on port 3000. (Check out: http://localhost:3000/ if the React scripts did not launch the application automatically.)
 
+## Project Structure ##
+1. Client:- Contains code for the client part.
+    1. Views: Defines different front end views.   
+       1. CurrentWeather.js: Handles displaying  the /search-location-weather route  results.
+       2. groupWeather.js: Handles displaying the /group-location-weather route  results.  
+       3. Home.js: Defines the homepage. 
+    2. Assets: Contains Images and Logos.
+    3. css: Contains all the css styling for all the pages.
+2. Server:- Contains the server part(routs and API).
+    1. Searchlocation.js: Defines all the routes
+    2. index.js: Looks for each route one by one.
+    3. server.js: Starts the express server.
+
 ## To Query: ##
 
 -We offer 3 Functionalities :
