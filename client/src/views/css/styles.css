@@ -67,7 +67,7 @@ body {
           justify-content: center;
   margin-top: 10px; }
   .instructions p {
-    width: 25%;
+    width: 60%;
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
@@ -108,7 +108,7 @@ body {
           justify-content: center;
   margin-top: 0.5px; }
   .time p {
-    width: 25%;
+    width: 60%;
     text-align: center;
     font-size: 1em;
     font-weight:bold;
@@ -122,7 +122,7 @@ body {
           justify-content: center;
   margin-top: 0.5px; }
   .relativetime p {
-    width: 25%;
+    width: 60%;
     text-align: center;
     font-size: 1em;
     font-weight: bold;
@@ -136,7 +136,7 @@ body {
           justify-content: center;
   margin-top: 0.5px; }
   .duration p {
-    width: 25%;
+    width: 60%;
     text-align: center;
     font-size: 1em;
     font-weight: bold;
@@ -150,7 +150,7 @@ body {
           justify-content: center;
   margin-top: 0.5px; }
   .aggregate p {
-    width: 25%;
+    width: 50%;
     text-align: center;
     font-size: 1em;
     font-weight: bold;
@@ -164,7 +164,7 @@ body {
           justify-content: center;
   margin-top: 0.5px; }
   .groupbytime p {
-    width: 25%;
+    width: 50%;
     text-align: center;
     font-size: 1em;
     font-weight: bold;
