@@ -20,6 +20,7 @@ const Home = () => {
       </div> */}
       <div className="time">
       <p>Time Supported:From: January 01, 2019 To: October 27, 2019 <br></br>You can use absolute time or relative time for the query. <br></br>Input Format "Absolute Time" :05/25/2018, 08:50 AM </p>
+      
       </div>
       <div className="relativetime">
       <p>Please check the "Use Relative time instead?" checkbox<br></br> if you want to use relative time. Relative time is supported wrt now() where now() is the current time. i.e now() -/+ "duration_literal.<br></br> Input Format "Relative Time": now()-10w, now()-100d"</p>
