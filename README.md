@@ -26,6 +26,9 @@
     1. Searchlocation.js: Defines all the routes
     2. index.js: Looks for each route one by one.
     3. server.js: Starts the express server.
+3. Screenshots:- Contains all the screenshots
+4. README.md:- The readme file.
+5. package.json:- Package dependencies.
 
 ## To Query: ##
 
