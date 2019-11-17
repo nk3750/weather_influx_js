@@ -19,10 +19,10 @@ const Home = () => {
       <p>Fields Supported: clouds_all, humidity, pressure, temp, temp_max, temp_min</p>
       </div> */}
       <div className="time">
-      <p>Time Supported:From: January 01, 2019 To: October 27, 2019 <br></br>You can use absolute time or relative time for the query. <br></br> Please check the "Use Relative time instead?" checkbox<br></br> if you want to use relative time</p>
+      <p>Time Supported:From: January 01, 2019 To: October 27, 2019 <br></br>You can use absolute time or relative time for the query. <br></br>Input Format "Absolute Time" :05/25/2018, 08:50 AM </p>
       </div>
       <div className="relativetime">
-      <p>Relative time is supported wrt now() where now() is the current time. i.e now() -/+ "duration_literal<br></br>  Input Format: now()-10w, now()-100d"</p>
+      <p>Please check the "Use Relative time instead?" checkbox<br></br> if you want to use relative time. Relative time is supported wrt now() where now() is the current time. i.e now() -/+ "duration_literal.<br></br> Input Format "Relative Time": now()-10w, now()-100d"</p>
       </div>
       <div className="duration">
       <p><strong>Duration Literals: (u or µ)-microseconds, (ms)-milliseconds, (s)-seconds, (m)-minutes, (h)-hours, (d)-days, (w)-weeks.  </strong></p>
