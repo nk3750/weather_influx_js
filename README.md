@@ -57,11 +57,10 @@
 1. Please enter a city . (Cities supported: rochester, atlanta)
 2. Supported aggregate functions: COUNT(), DISTINCT(), INTEGRAL(), MEAN(), MEDIAN(), MODE(), SPREAD(), STDDEV(), SUM() (Case sensitive :Capitalization is needed)
 3. Enter a tag :  clouds_all,humidity,pressure,temp,temp_max, temp_min
-4. 2.Select the desired fields and tags 
-5. Enter Date and time.  Date supported : January 01, 2019 To: October 27, 2019
-6. You can use the black down arrow to access the calendar and enter date. 
-7. You will have to manually select the time fields and enter the time in the format “08:00:AM” or use the white up down arrow to change it.
-8. Valid absolute time format : “06/05/2019, 08:00 AM”
-9. Group by time interval using Duration literals. Eg: 10s, 1m, 3h, 3d, 3w
-10. Hit Enter
+4. Enter Date and time.  Date supported : January 01, 2019 To: October 27, 2019
+5. You can use the black down arrow to access the calendar and enter date. 
+6. You will have to manually select the time fields and enter the time in the format “08:00:AM” or use the white up down arrow to change it.
+7. Valid absolute time format : “06/05/2019, 08:00 AM”
+8. Group by time interval using Duration literals. Eg: 10s, 1m, 3h, 3d, 3w
+9. Hit Enter
 #### This application was created with Node.js, Express, React and the Influx DB. It supports two cities Atlanta and Rochester as of now. 
